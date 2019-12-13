@@ -1,0 +1,106 @@
+<theme>
+    <formatVersion>3</formatVersion>
+    <include>./../retrocrt.xml</include>
+
+	<view name="system">
+
+		<image name="background" extra="true">
+			<tile>false</tile>
+			<pos>0.0 0.0</pos>
+			<origin>0 0</origin>
+			<size>1 1</size>
+			<color>004688</color>
+			<path>./../art/systemback.png</path>
+		</image>
+		
+		<image name="console_overlay" extra="true">
+			<tile>false</tile>
+			<pos>0.5 0.5</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.7 0.7</maxSize>
+			<path>./system.png</path>
+		</image>
+		
+		<image name="logo">
+			<path>./logo.png</path>
+        </image>
+		
+		<helpsystem name="help">
+			<textColor>ffffff</textColor>
+			<iconColor>ffffff</iconColor>
+		</helpsystem>
+		
+	</view>
+
+	<view name="basic, detailed">
+	</view>
+
+	<view name="basic">
+		
+		<image name="background" extra="true">
+			<tile>false</tile>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<size>1 1</size>
+			<color>004688</color>
+			<path>./background.png</path>
+		</image>
+
+		<image name="Border Overlay" extra="true">
+			<tile>false</tile>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<size>1 1</size>
+			<path>./background.png</path>
+		</image>		
+	
+		<textlist name="gamelist">
+			<pos>0.11 0.235</pos>
+			<size>0.8 0.647</size>
+			<alignment>center</alignment>
+			<horizontalMargin>0.01</horizontalMargin>
+			<!-- <fontSize>0.05</fontSize> -->
+			<selectorColor>00142680</selectorColor>
+			<selectedColor>ffce08</selectedColor>
+			<primaryColor>E5E5E5</primaryColor>
+			<secondaryColor>e3e3e3</secondaryColor>
+			<forceUppercase>1</forceUppercase>
+		</textlist>
+		
+	</view>
+
+	<view name="detailed">
+
+		<image name="background" extra="true">
+			<tile>false</tile>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<size>1 1</size>
+			<color>004688</color>
+			<path>./background.png</path>
+		</image>
+
+		<image name="Border Overlay" extra="true">
+			<tile>false</tile>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<size>1 1</size>
+			<path>./background.png</path>
+		</image>		
+	
+		<textlist name="gamelist">
+			<pos>0.11 0.07</pos>
+			<size>0.46 0.90</size>
+			<alignment>left</alignment>
+			<horizontalMargin>0.00</horizontalMargin>
+			<!-- <fontSize>0.03</fontSize> -->
+			<selectorColor>001426</selectorColor>
+			<selectedColor>ffce08</selectedColor>
+			<primaryColor>E5E5E5</primaryColor>
+			<secondaryColor>e3e3e3</secondaryColor>
+			<forceUppercase>0</forceUppercase>
+		</textlist>
+		
+	</view>
+	
+</theme>

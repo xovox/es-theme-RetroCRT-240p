@@ -1,0 +1,71 @@
+#!/bin/bash
+
+[ "$1" ] && cd "$1"
+echo "##############################################################################"
+pwd
+echo "##############################################################################"
+
+set -x
+
+transparency=0.3
+transparent=/tmp/transparent-$(date +%s).$$.png
+background=/tmp/black-$(date +%s).$$.png
+logotiny=/tmp/logotiny-$(date +%s).$$.png
+upperright=/tmp/upperright-$(date +%s).$$.png
+
+# image width
+allx="320"
+# image height
+ally="240"
+
+##############################################################################
+# nice 2px wide border with 10px buffer on sides
+##############################################################################
+curve="10"
+thick="2"
+outerx="10"
+outery="2"
+
+if [ -f specs ]; then
+	source specs
+fi
+
+primary="${primary:-#E60000}"
+secondary="${secondary:-#0000FF}"
+
+if [ "$systemtext" ]; then
+	convert \
+		-size 2000x2000 xc:transparent \
+		-font zorque \
+		-fill "$primary" \
+		-pointsize 200 \
+		-gravity center \
+		-annotate +0+0 "$systemtext" \
+		-fill "$secondary" \
+		-pointsize 195 \
+		-gravity center \
+		-annotate +0+0 "$systemtext" \
+		-trim \
+		+repage \
+			logo-big.png
+fi
+
+# roundrectangle x_offset,y_offset x_size,y_size x_round,y_round
+convert \
+	-size ${allx}x${ally} \
+	xc:black \
+	-fill "$primary" \
+	-draw "roundrectangle $outerx,$outery $[ $allx - $thick - $outerx ],$[ $ally - $thick ] $curve,$curve" \
+	-fill "$secondary" \
+	-draw "roundrectangle $[ $outerx + 2 ],$[ $outery + 2 ] $[ $allx - ($thick * 2) - $outerx ],$[ $ally - ($thick * 2) ] $[ $curve + 2 ],$[ $curve + 2 ]" \
+	-fill black \
+	-draw "roundrectangle $[ $outerx + 4 ],$[ $outery + 4 ] $[ $allx - ($thick * 3) - $outerx ],$[ $ally - ($thick * 3) ] $[ $curve + 4 ],$[ $curve + 4 ]" \
+	$background
+
+convert system-big.png -fuzz 1% -trim +repage -scale 320x240 system.png
+convert logo-big.png -fuzz 1% -trim +repage -scale x50 logo.png
+convert logo-big.png -fuzz 1% -trim +repage -scale 110x30 $logotiny
+convert -size 150x48 xc:transparent $logotiny -gravity center -composite $upperright
+convert system.png -resize 240x180 -alpha set -channel A -evaluate Multiply $transparency +channel $transparent
+convert $background $transparent -gravity center -composite $upperright  -gravity northeast -geometry +1+1 -composite background.png
+rm -f $transparent $logotiny $upperright $background
