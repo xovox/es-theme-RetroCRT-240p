@@ -4,19 +4,6 @@ This is a theme I've designed for [RetroCRT](https://github.com/xovox/RetroCRT),
 
 # Generating Logos
 
-Standard logos were easy
-
-```
-convert \
-	-size 1323x330 xc:transparent \
-	-font zorque \
-	-fill "#296ca2" \
-	-pointsize 200 \
-	-gravity center \
-	-annotate +0+0 "Last Played" \
-		logo-big.png
-```
-
 For the MAME logos with rotated text
 ```
 convert mame.png \
