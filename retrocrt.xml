@@ -1,6 +1,5 @@
 <!--
-theme name:		push-a
-copy, change & spread it 
+theme name:		RetroCRT-240p
 -->
 
 <theme>
@@ -8,6 +7,17 @@ copy, change & spread it
 
 	<view name="system">
 		
+     <image name="background" extra="true">
+            <tile>false</tile>
+            <pos>0.0 0.0</pos>
+            <origin>0 0</origin>
+            <size>1 1</size>
+<!--
+            <color>004688</color>
+-->
+            <path>./art/systemback.png</path>
+        </image>
+
 		<helpsystem name="help">
 			<pos>0.012 1.960</pos>
 			<textColor>ffc000</textColor>
@@ -18,44 +28,22 @@ copy, change & spread it
 
 	</view>
 
-    <view name="basic">
-
-		<helpsystem name="help">
-			<pos>0.012 1.960</pos>
-			<textColor>ffc000</textColor>
-			<iconColor>ffc000</iconColor>
-			<fontPath>./art/font.ttf</fontPath>
-			<fontSize>0.033</fontSize>
-		</helpsystem>
-		
-		<text name="md_lbl_playcount">
-			<pos>0.676 0.580</pos>
-			<fontSize>0.03</fontSize>
-		</text>
-		
-		<text name="md_playcount">
-			<pos>0.829 0.574</pos>
-			<fontSize>0.03</fontSize>
-		</text>
+	<view name="
+		detailed,
+		video,
+		grid
+		">
 		
 		<textlist name="gamelist">
-			<pos>0.034 0.235</pos>
-			<size>0.933 0.647</size>
-			<alignment>center</alignment>
+			<pos>0.055 0.05</pos>
+			<size>0.46 0.90</size>
+			<alignment>left</alignment>
 			<horizontalMargin>0.01</horizontalMargin>
 			<fontPath>./art/04B_03__.TTF</fontPath>
 			<fontSize>0.035</fontSize>
-			<selectorColor>350648</selectorColor>
-			<selectedColor>bc14ff</selectedColor>
-			<primaryColor>cccccc</primaryColor>
-			<secondaryColor>871F78</secondaryColor>
-			<forceUppercase>1</forceUppercase>
-			<!--<scrollSound>./art/flipper.wav</scrollSound>-->
+            <forceUppercase>1</forceUppercase>
 		</textlist>
-
-	</view>
-
-	<view name="detailed">
+		
 	    <helpsystem name="help">
 			<pos>0.012 1.960</pos>
 			<textColor>ffc000</textColor>
@@ -64,122 +52,129 @@ copy, change & spread it
 			<fontSize>0.035</fontSize>
 		</helpsystem>
 
-		<image name="logo">
-			<pos>0.274 0.114</pos>
-			<maxSize>0.418 0.115</maxSize>
-			<origin>0.5 0.5</origin>
-		</image>
-		
-		<image name="background" extra="true">
-			<tile>false</tile>
-			<pos>0 0</pos>
-			<origin>0 0</origin>
-			<size>1 1</size>
-		</image>
-
-		<image name="Border Overlay" extra="true">
-			<tile>false</tile>
-			<pos>0 0</pos>
-			<origin>0 0</origin>
-			<size>1 1</size>
-		</image>		
-	
-		<image name="md_image">
-			<pos>0.77 0.47</pos>
-			<maxSize>0.28 82 0.3</maxSize>
-			<origin>0.5 0.5</origin>
-		</image>
-		
-		<textlist name="gamelist">
-			<pos>0.033 0.25</pos>
-			<size>0.49 0.59</size>
-			<alignment>left</alignment>
-			<horizontalMargin>0.01</horizontalMargin>
-			<!-- <fontPath>./art/nokiafc22.ttf</fontPath>
-			<fontSize>1.0</fontSize> -->
-			<fontPath>./art/04B_03__.TTF</fontPath>
-			<fontSize>0.035</fontSize>
-			<selectorColor>350648</selectorColor>
-			<selectedColor>bc14ff</selectedColor>
-			<primaryColor>52b152</primaryColor>
-			<secondaryColor>871F78</secondaryColor>
-			<forceUppercase>0</forceUppercase>
-			<!--<scrollSound>./art/flipper.wav</scrollSound>-->
-		</textlist>
-		
-<!--         Start Meta Data                  -->	
-		<text name="md_lbl_rating, md_lbl_releasedate, md_lbl_players, md_players, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_genre, md_genre, md_lbl_players, md_players, md_lbl_playcount, md_playcount, md_lbl_lastplayed, md_description">
+		<text name="
+			md_lbl_description,
+			md_description,
+			md_lbl_developer,
+			md_developer,
+			md_lbl_genre,
+			md_genre,
+			md_lbl_lastplayed,
+			md_lastplayed,
+			md_lbl_playcount,
+			md_playcount,
+			md_lbl_players,
+			md_players,
+			md_lbl_players,
+			md_players,
+			md_lbl_publisher,
+			md_publisher,
+			md_lbl_rating,
+			md_rating,
+			md_lbl_releasedate,
+			md_releasedate
+			">
 			<pos>1 1</pos>
 			<size>0.192 0.030</size>
 			<color>cccccc</color>
-			<forceUppercase>0</forceUppercase>
+			<forceUppercase>1</forceUppercase>
 			<fontPath>./art/04B_03__.TTF</fontPath>
 			<fontSize>0.035</fontSize>
 		</text>
 	
-
 		<datetime name="md_releasedate">
-			<color>ffffff</color>
-			<pos>0.61 0.750</pos>
-			<color>cccccc</color>
-			<forceUppercase>0</forceUppercase>
-			<fontPath>./art/04B_03__.TTF</fontPath>
-			<fontSize>0.035</fontSize>
+			<format>(c)%Y</format>
+			<pos>0.525 0.750</pos>
 		</datetime>
 		
 		<text name="md_developer">
-			<pos>0.61 0.809</pos>
-			<forceUppercase>1</forceUppercase>
+			<pos>0.625 0.750</pos>
+			<size>0.400 0.03</size>
+		</text>
+
+		<text name="md_publisher">
+			<pos>0.625 0.775</pos>
+			<size>0.400 0.03</size>
+		</text>
+		
+		<text name="md_lbl_genre">
+			<pos>0.525 0.825</pos>
 		</text>
 		
 		<text name="md_genre">
-			<pos>0.61 0.853</pos>
+			<pos>0.610 0.825</pos>
+			<size>0.400 0.03</size>
 		</text>
 		
-		<datetime name="md_lastplayed">
-			<pos>1 1</pos>
-			<color>cccccc</color>
-			<forceUppercase>0</forceUppercase>
-			<fontPath>./art/04B_03__.TTF</fontPath>
-			<fontSize>0.035</fontSize>
-		</datetime>
-		
 		<text name="md_lbl_players">
-			<pos>0.8 0.780</pos>
+			<pos>0.525 0.850</pos>
 		</text>
 
 		<text name="md_players">
-			<pos>0.91 0.780</pos>
+			<pos>0.640 0.850</pos>
 		</text>
 		
-		<text name="md_publisher">
-			<pos>0.82 0.808</pos>
+		<text name="md_lbl_lastplayed">
+			<pos>0.525 0.875</pos>
 		</text>
 		
+		<datetime name="md_lastplayed">
+			<pos>0.695 0.875</pos>
+		</datetime>
+		
+		<text name="md_lbl_playcount">
+			<pos>0.525 0.900</pos>
+		</text>	
+
+		<text name="md_playcount">
+			<pos>0.710 0.900</pos>
+		</text>	
+
+		<text name="md_lbl_rating">
+			<pos>0.525 0.925</pos>
+		</text>	
+
 		<rating name="md_rating">
-			<pos>0.82 0.853</pos>
+			<pos>0.625 0.925</pos>
 			<size>0.192 0.030</size>
-			<filledPath>./art/star_filled.svg</filledPath>
-			<unfilledPath>./art/star_empty.svg</unfilledPath>
 		</rating>
 		
-		<text name="md_playcount">
-			<pos>1 1</pos>
-		</text>	
-		
-		<!--
-		<text name="md_description">
-			<pos>0.567 0.663</pos>
-			<size>0.400 0.209</size>
-		</text> 
-		-->
+<!-- maybe, maybe not?
+		<image name="md_marquee">
+			<origin>0.5 0.5</origin>
+			<pos>0.545 0.11</pos>
+			<maxSize>0.33 0.15</maxSize>
+		</image>
+-->
+	</view>
 
-	</view>	
+	<view name="detailed">
+		<image name="md_image">
+			<origin>0.5 0.5</origin>
+			<pos>0.730 0.48</pos>
+			<maxSize>0.40 0.50</maxSize>
+		</image>
+	</view>
 
-	<view name="basic, detailed">
+	<view name="video">
+		<video name="md_video">
+			<origin>0.5 0.5</origin>
+			<pos>0.77 0.50</pos>
+			<maxSize>0.50 0.50</maxSize>
+			<showSnapshotNoVideo>true</showSnapshotNoVideo>
+		</video>
+	</view>
 
+    <view name="basic">
+		<textlist name="gamelist">
+            <pos>0.11 0.180</pos>
+            <size>0.8 0.775</size>
+            <alignment>left</alignment>
+            <horizontalMargin>0.01</horizontalMargin>
+            <forceUppercase>1</forceUppercase>
+			<fontPath>./art/04B_03__.TTF</fontPath>
+			<fontSize>0.070</fontSize>
+        </textlist>
+	</view>
 
-	</view>	
-
-
-	</theme>
+</theme>
