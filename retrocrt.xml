@@ -12,9 +12,7 @@ theme name:		RetroCRT-240p
             <pos>0.0 0.0</pos>
             <origin>0 0</origin>
             <size>1 1</size>
-<!--
-            <color>004688</color>
--->
+            <color>0047ab</color>
             <path>./art/systemback.png</path>
         </image>
 
