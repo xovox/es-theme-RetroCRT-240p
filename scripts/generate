@@ -7,24 +7,16 @@ echo "##########################################################################
 
 set -x
 
+
+rounding="8,8"
 transparency=0.3
-transparent=/tmp/transparent-$(date +%s).$$.png
+full_x=320
+full_y=240
+
+darksystem=/tmp/darksystem-$(date +%s).$$.png
 background=/tmp/black-$(date +%s).$$.png
 logotiny=/tmp/logotiny-$(date +%s).$$.png
 upperright=/tmp/upperright-$(date +%s).$$.png
-
-# image width
-allx="320"
-# image height
-ally="240"
-
-##############################################################################
-# nice 2px wide border with 10px buffer on sides
-##############################################################################
-curve="10"
-thick="2"
-outerx="10"
-outery="2"
 
 if [ -f specs ]; then
 	source specs
@@ -35,7 +27,8 @@ secondary="${secondary:-#0000FF}"
 
 if [ "$systemtext" ]; then
 	convert \
-		-size 2000x2000 xc:transparent \
+		-size 2000x2000 \
+		xc:transparent \
 		-font zorque \
 		-fill "$primary" \
 		-pointsize 200 \
@@ -50,22 +43,74 @@ if [ "$systemtext" ]; then
 			logo-big.png
 fi
 
-# roundrectangle x_offset,y_offset x_size,y_size x_round,y_round
+# Create our rounded rectangle & watermark
 convert \
-	-size ${allx}x${ally} \
-	xc:black \
+	-size ${full_x}x${full_y} xc:black \
 	-fill "$primary" \
-	-draw "roundrectangle $outerx,$outery $[ $allx - $thick - $outerx ],$[ $ally - $thick ] $curve,$curve" \
+	-draw "roundrectangle 10,3 309,236 $rounding" \
 	-fill "$secondary" \
-	-draw "roundrectangle $[ $outerx + 2 ],$[ $outery + 2 ] $[ $allx - ($thick * 2) - $outerx ],$[ $ally - ($thick * 2) ] $[ $curve + 2 ],$[ $curve + 2 ]" \
-	-fill black \
-	-draw "roundrectangle $[ $outerx + 4 ],$[ $outery + 4 ] $[ $allx - ($thick * 3) - $outerx ],$[ $ally - ($thick * 3) ] $[ $curve + 4 ],$[ $curve + 4 ]" \
-	$background
+	-draw "roundrectangle 12,5 307,234 $rounding" \
+	-fill "black" \
+	-draw "roundrectangle 14,7 305,232 $rounding" \
+    -font zorque \
+    -fill "$primary" \
+	-pointsize "7" \
+    -gravity "southeast" \
+    -annotate +17+6 "RetroCRT" \
+    -font zorque \
+    -fill "$secondary" \
+	-pointsize "7" \
+    -gravity "southeast" \
+    -annotate +18+7 "RetroCRT" \
+		$background
 
-convert system-big.png -fuzz 1% -trim +repage -scale 320x240 system.png
-convert logo-big.png -fuzz 1% -trim +repage -scale x50 logo.png
-convert logo-big.png -fuzz 1% -trim +repage -scale 110x30 $logotiny
-convert -size 150x48 xc:transparent $logotiny -gravity center -composite $upperright
-convert system.png -resize 240x180 -alpha set -channel A -evaluate Multiply $transparency +channel $transparent
-convert $background $transparent -gravity center -composite $upperright  -gravity northeast -geometry +1+1 -composite background.png
-rm -f $transparent $logotiny $upperright $background
+# shrink our large system image
+convert system-big.png \
+	-fuzz 1% \
+	-trim \
+	+repage \
+	-scale 320x240 \
+		system.png
+
+# shrink our large system logo for sysetem browsing
+convert logo-big.png \
+	-fuzz 1% \
+	-trim \
+	+repage \
+	-scale x50 \
+		logo.png
+
+# make a temporary logo for the upper right of our browser
+convert logo-big.png \
+	-fuzz 1% \
+	-trim \
+	+repage \
+	-scale 130x30 \
+		$logotiny
+
+# create a transparent frame & center our tiny logo in it
+convert \
+	-size 140x40 \
+	xc:transparent \
+	$logotiny \
+	-gravity center \
+	-composite \
+		$upperright
+
+convert system.png \
+	-resize 240x180 \
+	-alpha set \
+	-channel A \
+	-evaluate Multiply $transparency \
+	+channel \
+		$darksystem
+
+convert $background $darksystem \
+	-gravity center \
+	-composite $upperright  \
+	-gravity northeast \
+    -geometry +14+7 \
+	-composite \
+		background.png
+
+rm -f $darksystem $logotiny $upperright $background
