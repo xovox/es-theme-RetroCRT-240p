@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while true ; do
+	while ! inotifywait -e modify "retrocrt.xml" ; do
+		rsync -av --progress --delete --exclude '*swp' ./ rpi:/etc/emulationstation/themes/Beta/
+		ssh rpi "killall emulationstation"
+		date
+	done
+done
