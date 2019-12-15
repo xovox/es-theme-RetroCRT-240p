@@ -2,6 +2,8 @@
 
 This is a theme I've designed for [RetroCRT](https://github.com/xovox/RetroCRT), my customized toolset to run [RetroPie](https://retropie.org.uk) on CRT TVs & arcade cabinets.
 
+![alt text](https://raw.githubusercontent.com/xovox/RetroCRT-Media/master/RetroCRT-240p/NES_Mockup.png)
+
 # Generating Logos
 
 For the MAME logos with rotated text
