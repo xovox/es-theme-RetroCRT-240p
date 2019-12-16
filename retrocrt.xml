@@ -83,6 +83,7 @@ theme name:		RetroCRT-240p
 		<datetime name="md_releasedate">
 			<format>(c)%Y</format>
 			<pos>0.525 0.750</pos>
+			<size>0.10 0.03</size>
 		</datetime>
 		
 		<text name="md_developer">
