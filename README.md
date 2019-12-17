@@ -2,6 +2,9 @@
 
 This is a theme I've designed for [RetroCRT](https://github.com/xovox/RetroCRT), my customized toolset to run [RetroPie](https://retropie.org.uk) on CRT TVs & arcade cabinets.
 
+* Installation
+  * This is installable via RetroPie-Setup
+
 * Supports
   * Basic View with MASSIVE TEXT
   * Detailed View
