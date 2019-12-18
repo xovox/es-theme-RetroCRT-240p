@@ -161,6 +161,8 @@ theme name:		RetroCRT-240p
 			<pos>0.730 0.48</pos>
 			<maxSize>0.40 0.50</maxSize>
 			<showSnapshotNoVideo>true</showSnapshotNoVideo>
+			<delay>3</delay>
+			<showSnapshotDelay>true</showSnapshotDelay>
 		</video>
 	</view>
 
