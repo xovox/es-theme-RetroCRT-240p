@@ -24,6 +24,13 @@ theme name:		RetroCRT-240p
 			<fontSize>0.033</fontSize>
 		</helpsystem>
 
+		<text name="systemInfo">
+			<fontPath>./art/04B_03__.TTF</fontPath>
+			<fontSize>0.035</fontSize>
+			<color>000000</color>
+			<backgroundColor>FFFFFFCC</backgroundColor>
+		</text>
+
 	</view>
 
 	<view name="
