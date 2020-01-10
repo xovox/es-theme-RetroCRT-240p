@@ -1,5 +1,6 @@
 <!--
 theme name:		RetroCRT-240p
+website:		https://github.com/xovox/es-theme-RetroCRT-240p
 -->
 
 <theme>
@@ -21,7 +22,7 @@ theme name:		RetroCRT-240p
 			<textColor>ffc000</textColor>
 			<iconColor>ffc000</iconColor>
 			<fontPath>./art/04B_03__.TTF</fontPath>
-			<fontSize>0.033</fontSize>
+			<fontSize>0.035</fontSize>
 		</helpsystem>
 
 		<text name="systemInfo">
