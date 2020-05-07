@@ -30,11 +30,11 @@ if [ "$systemtext" ]; then
 		-size 2000x2000 \
 		xc:transparent \
 		-font zorque \
-		-fill "$primary" \
+		-fill "$secondary" \
 		-pointsize 200 \
 		-gravity center \
 		-annotate +0+0 "$systemtext" \
-		-fill "$secondary" \
+		-fill "$primary" \
 		-pointsize 195 \
 		-gravity center \
 		-annotate +0+0 "$systemtext" \
@@ -53,12 +53,12 @@ convert \
 	-fill "black" \
 	-draw "roundrectangle 14,7 305,232 $rounding" \
     -font zorque \
-    -fill "$primary" \
+    -fill "$secondary" \
 	-pointsize "7" \
     -gravity "southeast" \
     -annotate +17+6 "RetroCRT" \
     -font zorque \
-    -fill "$secondary" \
+    -fill "$primary" \
 	-pointsize "7" \
     -gravity "southeast" \
     -annotate +18+7 "RetroCRT" \

@@ -3,6 +3,6 @@
 for i in */ ; do
 	if [ ! -f $i/system-big.png ]; then
 		read -p "$i // system image: " systemurl
-		wget -O $i/system-big.png "$systemurl"
+		[ "$systemurl" ] && wget -O $i/system-big.png "$systemurl"
 	fi
 done
