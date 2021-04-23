@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while true ; do
+	while ! inotifywait -e modify "mkborder" ; do
+		./mkborder ../background/background.png
+		date
+		killall emulationstation
+	done
+done

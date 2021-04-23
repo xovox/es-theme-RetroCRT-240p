@@ -1,189 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
-theme name:		RetroCRT-240p
-website:		https://github.com/xovox/es-theme-RetroCRT-240p
+RetroCRT3-240p theme for EmulationStation
+(c) 2021 duncan brown (https://github.com/xovox)
 -->
-
 <theme>
-    <formatVersion>3</formatVersion>
-
-	<view name="system">
-		
-     <image name="background" extra="true">
-            <tile>false</tile>
-            <pos>0.0 0.0</pos>
-            <origin>0 0</origin>
-            <size>1 1</size>
-            <color>0047ab</color>
-            <path>./art/systemback.png</path>
-        </image>
-
-		<helpsystem name="help">
-			<pos>0.012 1.960</pos>
-			<textColor>ffc000</textColor>
-			<iconColor>ffc000</iconColor>
-			<fontPath>./art/04B_03__.TTF</fontPath>
-			<fontSize>0.035</fontSize>
-		</helpsystem>
-
-		<text name="systemInfo">
-			<fontPath>./art/04B_03__.TTF</fontPath>
-			<fontSize>0.035</fontSize>
-			<color>000000</color>
-			<backgroundColor>FFFFFFCC</backgroundColor>
-		</text>
-
-	</view>
-
-	<view name="
-		detailed,
-		video,
-		grid
-		">
-		
-		<textlist name="gamelist">
-			<pos>0.055 0.05</pos>
-			<size>0.46 0.90</size>
-			<alignment>left</alignment>
-			<horizontalMargin>0.01</horizontalMargin>
-			<fontPath>./art/04B_03__.TTF</fontPath>
-			<fontSize>0.035</fontSize>
-            <forceUppercase>1</forceUppercase>
-		</textlist>
-		
-	    <helpsystem name="help">
-			<pos>0.012 1.960</pos>
-			<textColor>ffc000</textColor>
-			<iconColor>ffc000</iconColor>
-			<fontPath>./art/04B_03__.TTF</fontPath>
-			<fontSize>0.035</fontSize>
-		</helpsystem>
-
-		<text name="
-			md_lbl_description,
-			md_description,
-			md_lbl_developer,
-			md_developer,
-			md_lbl_genre,
-			md_genre,
-			md_lbl_lastplayed,
-			md_lastplayed,
-			md_lbl_playcount,
-			md_playcount,
-			md_lbl_players,
-			md_players,
-			md_lbl_players,
-			md_players,
-			md_lbl_publisher,
-			md_publisher,
-			md_lbl_rating,
-			md_rating,
-			md_lbl_releasedate,
-			md_releasedate
-			">
-			<pos>1 1</pos>
-			<size>0.192 0.030</size>
-			<color>cccccc</color>
-			<forceUppercase>1</forceUppercase>
-			<fontPath>./art/04B_03__.TTF</fontPath>
-			<fontSize>0.035</fontSize>
-		</text>
-	
-		<datetime name="md_releasedate">
-			<format>(c)%Y</format>
-			<pos>0.525 0.750</pos>
-			<size>0.10 0.03</size>
-		</datetime>
-		
-		<text name="md_developer">
-			<pos>0.625 0.750</pos>
-			<size>0.400 0.03</size>
-		</text>
-
-		<text name="md_publisher">
-			<pos>0.625 0.775</pos>
-			<size>0.400 0.03</size>
-		</text>
-		
-		<text name="md_lbl_genre">
-			<pos>0.525 0.825</pos>
-		</text>
-		
-		<text name="md_genre">
-			<pos>0.610 0.825</pos>
-			<size>0.400 0.03</size>
-		</text>
-		
-		<text name="md_lbl_players">
-			<pos>0.525 0.850</pos>
-		</text>
-
-		<text name="md_players">
-			<pos>0.640 0.850</pos>
-		</text>
-		
-		<text name="md_lbl_lastplayed">
-			<pos>0.525 0.875</pos>
-		</text>
-		
-		<datetime name="md_lastplayed">
-			<pos>0.695 0.875</pos>
-		</datetime>
-		
-		<text name="md_lbl_playcount">
-			<pos>0.525 0.900</pos>
-		</text>	
-
-		<text name="md_playcount">
-			<pos>0.710 0.900</pos>
-		</text>	
-
-		<text name="md_lbl_rating">
-			<pos>0.525 0.925</pos>
-		</text>	
-
-		<rating name="md_rating">
-			<pos>0.625 0.925</pos>
-			<size>0.192 0.030</size>
-		</rating>
-		
-<!-- maybe, maybe not?
-		<image name="md_marquee">
-			<origin>0.5 0.5</origin>
-			<pos>0.545 0.11</pos>
-			<maxSize>0.33 0.15</maxSize>
-		</image>
+  <formatVersion>
+			4
+  </formatVersion>
+  <feature supported="carousel">
+    <view name="system">
+      <carousel name="systemcarousel">
+        <type>vertical</type>
+<!--
+        <pos>.350  .5</pos>
+        <size>.600     0.85</size>
 -->
-	</view>
+        <pos>0.500  0.320</pos>
+        <size>0.900     0.500</size>
+	<origin>0.500 0.500</origin>
+        <logoAlignment>center</logoAlignment>
+        <logoScale>0.75</logoScale>
+        <!-- object layer, higher goes on top of lower -->
+        <zIndex>10</zIndex>
+        <!-- how large the system logo should be -->
+        <logoSize>0.500  0.075</logoSize>
+        <color>000000FF</color>
+        <maxLogoCount>11</maxLogoCount>
+      </carousel>
+      <image name="logo">
+        <path>./_inc/logo/${system.theme}.png</path>
+        <color>FF8C00</color>
+      </image>
+      <image name="system" extra="true">
+        <origin>0.5 0.5</origin>
+        <pos>0.250 0.750</pos>
+        <maxSize>0.400 0.333</maxSize>
+        <path>./_inc/system/${system.theme}.png</path>
+          <!-- object layer, higher goes on top of lower -->
+        <zIndex>5</zIndex>
+        <color>FFFFFF55</color>
+      </image>
+      <!-- "games available" text -->
+      <text name="systemInfo">
+        <fontPath>./_inc/font/04B_03__.TTF</fontPath>
+        <fontSize>0.035</fontSize>
+        <origin>0.500 0.500</origin>
+        <pos>0.750 0.750</pos>
+        <color>FF8C00EE</color>
+      </text>
+    </view>
+  </feature>
 
-	<view name="detailed">
-		<image name="md_image">
-			<origin>0.5 0.5</origin>
-			<pos>0.730 0.48</pos>
-			<maxSize>0.40 0.50</maxSize>
-		</image>
-	</view>
+  <view name="detailed, video">
+ <text name="shortdescription" extra="true">
+        <fontPath>./_inc/font/04B_03__.TTF</fontPath>
+        <alignment>center</alignment>
+        <forceUppercase>1</forceUppercase>
+        <fontSize>0.03</fontSize>
+        <zIndex>100</zIndex>
+        <color>818181</color>
+        <origin>0.5 0.5</origin>
+        <pos>0.710 0.800</pos>
+        <size>0.32 0.1</size>
+ </text>
+    <text name="
+	       gamelist,
+               md_lbl_lastplayed,
+               md_lbl_playcount,
+               md_lbl_players,
+               md_developer,
+               md_genre,
+               md_lastplayed,
+               md_playcount,
+               md_players,
+               md_releasedate
+               ">
+      <!-- <size>0.192 0.030</size> -->
+      <origin>0 1</origin>
+      <color>FF8C00</color>
+      <forceUppercase>1</forceUppercase>
+      <fontPath>./_inc/font/04B_03__.TTF</fontPath>
+      <fontSize>0.035</fontSize>
+    </text>
+<!--
+               md_lbl_description,
+               md_lbl_developer,
+               md_lbl_genre,
+               md_lbl_publisher,
+               md_lbl_rating,
+               md_lbl_releasedate,
+               md_rating,
+               md_publisher,
+               md_description,
+-->
 
-	<view name="video">
-		<video name="md_video">
-			<origin>0.5 0.5</origin>
-			<pos>0.730 0.48</pos>
-			<maxSize>0.40 0.50</maxSize>
-			<showSnapshotNoVideo>true</showSnapshotNoVideo>
-			<delay>3</delay>
-			<showSnapshotDelay>true</showSnapshotDelay>
-		</video>
-	</view>
+    <!-- <text name="md_publisher">		<pos>0.550 0.775</pos>	<size>0.500 0.13</size>				</text> -->
+    <!-- <text name="md_lbl_genre">		<pos>0.525 0.825</pos>							</text> -->
+    <!-- this is the placement of the game details -->
+    <datetime name="md_releasedate">	<pos>0.550 0.750</pos>	<size>0.1 0.03</size>	<format>(c)%Y</format>	</datetime>
+    <text name="md_developer">		<pos>0.650 0.750</pos>	<size>0.300 0.03</size>				</text>
+    <text name="md_genre">		<pos>0.550 0.785</pos>	<size>0.5 0.03</size>				</text>
+    <text name="md_lbl_players">	<pos>0.550 0.820</pos>	<size>0.325 0.03</size>				</text>
+    <text name="md_players">		<pos>0.670 0.820</pos>	<size>0.325 0.03</size>				</text>
+    <text name="md_lbl_lastplayed">	<pos>0.550 0.855</pos>	<size>0.325 0.03</size>				</text>
+    <datetime name="md_lastplayed">	<pos>0.720 0.855</pos>	<size>0.325 0.03</size>				</datetime>
+    <text name="md_lbl_playcount">	<pos>0.550 0.890</pos>	<size>0.325 0.03</size>				</text>
+    <text name="md_playcount">		<pos>0.735 0.890</pos>	<size>0.325 0.03</size>				</text>
+<!--
+    <text name="md_lbl_rating">		<pos>0.550 0.885</pos>							</text>
+    <rating name="md_rating">		<pos>0.625 0.885</pos>	<size>0.192 0.030</size>			</rating>
+-->
 
-    <view name="basic">
-		<textlist name="gamelist">
-            <pos>0.11 0.180</pos>
-            <size>0.8 0.775</size>
-            <alignment>left</alignment>
-            <horizontalMargin>0.01</horizontalMargin>
-            <forceUppercase>1</forceUppercase>
-			<fontPath>./art/04B_03__.TTF</fontPath>
-			<fontSize>0.070</fontSize>
-        </textlist>
-	</view>
+    <textlist name="gamelist">
+      <origin>0.5 0.5</origin>
+      <pos>0.280 0.555</pos>
+      <size>0.45 0.70</size>
+      <alignment>left</alignment>
+      <!-- game text -->
+      <primaryColor>FF8C00EE</primaryColor>
+      <!-- dir text -->
+      <secondaryColor>FF4500</secondaryColor>
+      <selectedColor>FF8C00FF</selectedColor>
+      <selectorColor>FF450055</selectorColor>
+    </textlist>
+    <image name="logo" extra="true">
+      <path>./_inc/biglogo/${system.theme}.png</path>
+      <origin>0.5 0.5</origin>
+      <pos>0.280 0.133</pos>
+      <maxSize>0.40 0.115</maxSize>
+        <color>ffffff</color>
+    </image>
+    <image name="md_marquee">
+      <origin>0.5 0.5</origin>
+      <pos>0.740 0.133</pos>
+      <maxSize>0.40 0.115</maxSize>
+    </image>
+    <video name="md_video">
+      <origin>0.5 0.5</origin>
+      <pos>0.740 0.46</pos>
+      <maxSize>0.4 0.50</maxSize>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <delay>3</delay>
+      <showSnapshotDelay>true</showSnapshotDelay>
+    </video>
+  </view>
+
+  <view name="detailed,video,basic,system">
+    <image name="background" extra="true">
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+      <maxSize>1 1</maxSize>
+      <size>1 1</size>
+      <tile>false</tile>
+      <path>./_inc/background/background.png</path>
+      <color>FF8C00FF</color>
+        <!-- object layer, higher goes on top of lower -->
+      <zIndex>0</zIndex>
+    </image>
+    <helpsystem name="help">
+      <pos>0.012 1.960</pos>
+      <textColor>ffc000</textColor>
+      <iconColor>ffc000</iconColor>
+      <fontPath>./_inc/font/04B_03__.TTF</fontPath>
+      <fontSize>0.035</fontSize>
+    </helpsystem>
+  </view>
+
+  <view name="basic">
+    <textlist name="gamelist">
+      <origin>0.5 0.5</origin>
+      <pos>0.5 0.475</pos>
+      <size>0.9 0.8</size>
+      <alignment>left</alignment>
+      <horizontalMargin>0.01</horizontalMargin>
+      <forceUppercase>1</forceUppercase>
+      <fontPath>./_inc/font/04B_03__.TTF</fontPath>
+      <fontSize>0.070</fontSize>
+      <!-- game text -->
+      <primaryColor>FF8C00</primaryColor>
+      <!-- dir text -->
+      <secondaryColor>FF4500</secondaryColor>
+      <selectedColor>FF8C00</selectedColor>
+      <selectorColor>FF450099</selectorColor> 
+    </textlist>
+    <image name="system" extra="true">
+      <origin>0.5 0.5</origin>
+      <pos>.5 .5</pos>
+      <maxSize>.80 .80</maxSize>
+      <path>./_inc/system/${system.theme}.png</path>
+      <!-- <color>AAAAAACC</color> -->
+    </image>
+  </view>
+
 
 </theme>

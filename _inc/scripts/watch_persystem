@@ -1,0 +1,15 @@
+#!/bin/bash
+
+while true ; do
+	while ! inotifywait -e modify "generic.xml" ; do
+		for i in */theme.xml ; do
+			[ "$i" != "retropie/theme.xml" ] && cp -v generic.xml $i
+		done
+#		for i in */background.png ; do
+#			echo "<img src=$i>"
+#		done > preview.html
+#		rsync -av --progress --delete --exclude '*swp' ./ rpi:/etc/emulationstation/themes/Beta/
+		date
+		killall emulationstation
+	done
+done

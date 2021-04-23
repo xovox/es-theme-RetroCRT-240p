@@ -1,9 +1,0 @@
-#!/bin/bash
-
-while true ; do
-	while ! inotifywait -e modify "retrocrt.xml" ; do
-		rsync --bwlimit 750k -av --progress --delete --exclude '*swp' --exclude .git ./ rpi:"/etc/emulationstation/themes/RetroCRT-240p-Beta/"
-		ssh rpi "killall emulationstation"
-		date
-	done
-done

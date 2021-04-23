@@ -1,0 +1,118 @@
+#!/bin/bash
+
+font=Arcade-Interlaced
+
+[ "$1" ] && cd "$1"
+echo "##############################################################################"
+pwd
+echo "##############################################################################"
+
+set -x
+
+
+rounding="8,8"
+transparency=0.3
+full_x=320
+full_y=240
+
+darksystem=/tmp/darksystem-$(date +%s).$$.png
+background=/tmp/black-$(date +%s).$$.png
+logotiny=/tmp/logotiny-$(date +%s).$$.png
+upperright=/tmp/upperright-$(date +%s).$$.png
+
+if [ -f specs ]; then
+	source specs
+fi
+
+primary="${primary:-#E60000}"
+secondary="${secondary:-#0000FF}"
+
+if [ "$systemtext" ]; then
+	convert \
+		-size 2000x2000 \
+		xc:transparent \
+		-font $font \
+		-fill "$secondary" \
+		-pointsize 200 \
+		-gravity center \
+		-annotate +0+0 "$systemtext" \
+		-fill "$primary" \
+		-pointsize 195 \
+		-gravity center \
+		-annotate +0+0 "$systemtext" \
+		-trim \
+		+repage \
+			logo-big.png
+fi
+
+# Create our rounded rectangle & watermark
+convert \
+	-size ${full_x}x${full_y} xc:black \
+	-fill "$primary" \
+	-draw "roundrectangle 10,3 309,236 $rounding" \
+	-fill "$secondary" \
+	-draw "roundrectangle 12,5 307,234 $rounding" \
+	-fill "black" \
+	-draw "roundrectangle 14,7 305,232 $rounding" \
+    -font $font \
+    -fill "$secondary" \
+	-pointsize "7" \
+    -gravity "southeast" \
+    -annotate +17+6 "RetroCRT" \
+    -font $font \
+    -fill "$primary" \
+	-pointsize "7" \
+    -gravity "southeast" \
+    -annotate +18+7 "RetroCRT" \
+		$background
+
+# shrink our large system image
+convert system-big.png \
+	-fuzz 1% \
+	-trim \
+	+repage \
+	-scale 320x240 \
+		system.png
+
+# shrink our large system logo for sysetem browsing
+convert logo-big.png \
+	-fuzz 1% \
+	-trim \
+	+repage \
+	-scale x50 \
+		logo.png
+
+# make a temporary logo for the upper right of our browser
+convert logo-big.png \
+	-fuzz 1% \
+	-trim \
+	+repage \
+	-scale 130x30 \
+		$logotiny
+
+# create a transparent frame & center our tiny logo in it
+convert \
+	-size 140x40 \
+	xc:transparent \
+	$logotiny \
+	-gravity center \
+	-composite \
+		$upperright
+
+convert system.png \
+	-resize 240x180 \
+	-alpha set \
+	-channel A \
+	-evaluate Multiply $transparency \
+	+channel \
+		$darksystem
+
+convert $background $darksystem \
+	-gravity center \
+	-composite $upperright  \
+	-gravity northeast \
+    -geometry +14+7 \
+	-composite \
+		background.png
+
+rm -f $darksystem $logotiny $upperright $background

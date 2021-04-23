@@ -1,0 +1,11 @@
+--2021-04-20 15:26:59--  http://www.fmwconcepts.com/imagemagick/downloadcounter.php?scriptname=stainedglass
+Resolving www.fmwconcepts.com (www.fmwconcepts.com)... 160.153.52.230
+Connecting to www.fmwconcepts.com (www.fmwconcepts.com)|160.153.52.230|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘downloadcounter.php?scriptname=stainedglass’
+
+               downloadcounte     [<=>                                             ]       0  --.-KB/s               downloadcounter.php?scriptnam     [ <=>                                            ]      17  --.-KB/s    in 0s      
+
+2021-04-20 15:27:00 (486 KB/s) - ‘downloadcounter.php?scriptname=stainedglass’ saved [17]
+

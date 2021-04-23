@@ -1,0 +1,52 @@
+#!/bin/bash
+
+font=Arcade-Normal
+primary="#FF8C00"
+secondary="#FF4500"
+
+rounding="8,8"
+transparency=0.3
+full_x=640
+full_y=480
+
+#background=/var/www/html/background.png
+background="$1"
+
+if [ -f specs ]; then
+	source specs
+fi
+
+primary="#e388ff"
+secondary="#C000C0"
+#primary="#0000FF"
+#secondary="#000088"
+primary="#FF8C00EE"
+secondary="#FF4500"
+primary="#FFFFFF"
+secondary="#B7B7B7"
+primary="#FFFFFF"
+secondary="#AAAAAA"
+
+primary="${primary:-#E60000}"
+secondary="${secondary:-#0000FF}"
+
+convert \
+	-size ${full_x}x${full_y} xc:transparent \
+	-fill "$primary" \
+	-draw "roundrectangle 20,20 620,460 $rounding" \
+	-fill "$secondary" \
+	-draw "roundrectangle 24,24 616,456 $rounding" \
+	-fill "black" \
+	-draw "roundrectangle 28,28 612,452 $rounding" \
+    -font $font \
+    -fill "$secondary" \
+	-pointsize "16" \
+    -gravity "southeast" \
+    -annotate +30+30 "RetroCRT" \
+    -font $font \
+    -fill "$primary" \
+	-pointsize "16" \
+    -gravity "southeast" \
+    -annotate +32+32 "RetroCRT" \
+		$background
+

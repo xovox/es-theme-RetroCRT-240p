@@ -1,9 +1,8 @@
 # RetroCRT 240p RetroPie Theme
 
-This is a theme I've designed for [RetroCRT](https://github.com/xovox/RetroCRT), my customized toolset to run [RetroPie](https://retropie.org.uk) on CRT TVs & arcade cabinets.
+This theme is under active development and will be changing regularly for the forseeable future
 
-* Installation
-  * This is installable via RetroPie-Setup
+This is a theme I've designed for [RetroCRT](https://github.com/xovox/RetroCRT), my customized toolset to run [RetroPie](https://retropie.org.uk) on CRT TVs & arcade cabinets.
 
 * Supports
   * Basic View with MASSIVE TEXT

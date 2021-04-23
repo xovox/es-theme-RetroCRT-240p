@@ -1,0 +1,50 @@
+#!/bin/bash
+
+font=Lazer84
+font="Solomon's-Key-True-Type-Smoose"
+font="Karmatic-Arcade"
+font=Game-Played
+font=Arcade-Interlaced
+font=Arcade-Rounded
+font=Arcade-Normal
+
+#source systems
+
+#primary="#e388ff"
+#secondary="#C000C0"
+
+#primary="#FFCC00"
+#secondary="#ccB000"
+font=Arcade-Normal
+primary="#FF8C00"
+secondary="#FF4500"
+primary="#FFFFFF"
+secondary="#888888"
+#primary=green
+#secondary=red
+#primary="#AAAAAA"
+#secondary="#444444"
+primary="${primary:-#E60000}"
+secondary="${secondary:-#0000FF}"
+
+source ../scripts/systems
+
+for system in ${!system_name[@]} ; do
+	systemtext="${system_name[$system]}"
+
+	echo "$system	$systemtext"
+
+	convert \
+		-size 240x20 \
+		xc:transparent \
+		-font "$font" \
+		-fill "$secondary" \
+		-pointsize 16 \
+		-gravity center \
+		-annotate +2+2 "$systemtext" \
+		-fill "$primary" \
+		-pointsize 16 \
+		-gravity center \
+		-annotate +0+0 "$systemtext" \
+			$system.png
+done

@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16.1 16.1">
+<rect width="100%" height="100%"/>
+<path id="a" d="m0.1 0.1h.9v.9h-.9"/>
+<g fill="#00a"><use id="b" x="1" xlink:href="#a"/></g>
+<g fill="#0a0"><use id="c" x="1" xlink:href="#b"/></g>
+<g fill="#0aa"><use id="d" x="1" xlink:href="#c"/></g>
+<g fill="#a00"><use id="e" x="1" xlink:href="#d"/></g>
+<g fill="#a0a"><use id="f" x="1" xlink:href="#e"/></g>
+<g fill="#a50"><use id="g" x="1" xlink:href="#f"/></g>
+<g fill="#aaa"><use id="h" x="1" xlink:href="#g"/></g>
+<g fill="#555"><use id="i" x="1" xlink:href="#h"/></g>
+<g fill="#55f"><use id="j" x="1" xlink:href="#i"/></g>
+<g fill="#5f5"><use id="k" x="1" xlink:href="#j"/></g>
+<g fill="#5ff"><use id="l" x="1" xlink:href="#k"/></g>
+<g fill="#f55"><use id="m" x="1" xlink:href="#l"/></g>
+<g fill="#f5f"><use id="n" x="1" xlink:href="#m"/></g>
+<g fill="#ff5"><use id="o" x="1" xlink:href="#n"/></g>
+<g fill="#fff"><use id="p" x="1" xlink:href="#o"/></g>
+<g transform="translate(0,1)">
+<use xlink:href="#b" fill="#101010"/>
+<use xlink:href="#c" fill="#202020"/>
+<use xlink:href="#d" fill="#353535"/>
+<use xlink:href="#e" fill="#454545"/>
+<use xlink:href="#f" fill="#555"/>
+<use xlink:href="#g" fill="#656565"/>
+<use xlink:href="#h" fill="#757575"/>
+<use xlink:href="#i" fill="#8a8a8a"/>
+<use xlink:href="#j" fill="#9a9a9a"/>
+<use xlink:href="#k" fill="#aaa"/>
+<use xlink:href="#l" fill="#bababa"/>
+<use xlink:href="#m" fill="#cacaca"/>
+<use xlink:href="#n" fill="#dfdfdf"/>
+<use xlink:href="#o" fill="#efefef"/>
+<use xlink:href="#p" fill="#fff"/>
+</g>
+<g transform="translate(0,2)">
+<use xlink:href="#a" fill="#00f"/>
+<use xlink:href="#b" fill="#4100ff"/>
+<use xlink:href="#c" fill="#8200ff"/>
+<use xlink:href="#d" fill="#be00ff"/>
+<use xlink:href="#e" fill="#f0f"/>
+<use xlink:href="#f" fill="#ff00be"/>
+<use xlink:href="#g" fill="#ff0082"/>
+<use xlink:href="#h" fill="#ff0041"/>
+<use xlink:href="#i" fill="#f00"/>
+<use xlink:href="#j" fill="#ff4100"/>
+<use xlink:href="#k" fill="#ff8200"/>
+<use xlink:href="#l" fill="#ffbe00"/>
+<use xlink:href="#m" fill="#ff0"/>
+<use xlink:href="#n" fill="#beff00"/>
+<use xlink:href="#o" fill="#82ff00"/>
+<use xlink:href="#p" fill="#41ff00"/>
+</g>
+<g transform="translate(0,3)">
+<use xlink:href="#a" fill="#0f0"/>
+<use xlink:href="#b" fill="#00ff41"/>
+<use xlink:href="#c" fill="#00ff82"/>
+<use xlink:href="#d" fill="#00ffbe"/>
+<use xlink:href="#e" fill="#0ff"/>
+<use xlink:href="#f" fill="#00beff"/>
+<use xlink:href="#g" fill="#0082ff"/>
+<use xlink:href="#h" fill="#0041ff"/>
+<use xlink:href="#i" fill="#8282ff"/>
+<use xlink:href="#j" fill="#9e82ff"/>
+<use xlink:href="#k" fill="#be82ff"/>
+<use xlink:href="#l" fill="#df82ff"/>
+<use xlink:href="#m" fill="#ff82ff"/>
+<use xlink:href="#n" fill="#ff82df"/>
+<use xlink:href="#o" fill="#ff82be"/>
+<use xlink:href="#p" fill="#ff829e"/>
+</g>
+<g transform="translate(0,4)">
+<use xlink:href="#a" fill="#ff8282"/>
+<use xlink:href="#b" fill="#ff9e82"/>
+<use xlink:href="#c" fill="#ffbe82"/>
+<use xlink:href="#d" fill="#ffdf82"/>
+<use xlink:href="#e" fill="#ffff82"/>
+<use xlink:href="#f" fill="#dfff82"/>
+<use xlink:href="#g" fill="#beff82"/>
+<use xlink:href="#h" fill="#9eff82"/>
+<use xlink:href="#i" fill="#82ff82"/>
+<use xlink:href="#j" fill="#82ff9e"/>
+<use xlink:href="#k" fill="#82ffbe"/>
+<use xlink:href="#l" fill="#82ffdf"/>
+<use xlink:href="#m" fill="#82ffff"/>
+<use xlink:href="#n" fill="#82dfff"/>
+<use xlink:href="#o" fill="#82beff"/>
+<use xlink:href="#p" fill="#829eff"/>
+</g>
+<g transform="translate(0,5)">
+<use xlink:href="#a" fill="#babaff"/>
+<use xlink:href="#b" fill="#cabaff"/>
+<use xlink:href="#c" fill="#dfbaff"/>
+<use xlink:href="#d" fill="#efbaff"/>
+<use xlink:href="#e" fill="#ffbaff"/>
+<use xlink:href="#f" fill="#ffbaef"/>
+<use xlink:href="#g" fill="#ffbadf"/>
+<use xlink:href="#h" fill="#ffbaca"/>
+<use xlink:href="#i" fill="#ffbaba"/>
+<use xlink:href="#j" fill="#ffcaba"/>
+<use xlink:href="#k" fill="#ffdfba"/>
+<use xlink:href="#l" fill="#ffefba"/>
+<use xlink:href="#m" fill="#ffffba"/>
+<use xlink:href="#n" fill="#efffba"/>
+<use xlink:href="#o" fill="#dfffba"/>
+<use xlink:href="#p" fill="#caffba"/>
+</g>
+<g transform="translate(0,6)">
+<use xlink:href="#a" fill="#baffba"/>
+<use xlink:href="#b" fill="#baffca"/>
+<use xlink:href="#c" fill="#baffdf"/>
+<use xlink:href="#d" fill="#baffef"/>
+<use xlink:href="#e" fill="#baffff"/>
+<use xlink:href="#f" fill="#baefff"/>
+<use xlink:href="#g" fill="#badfff"/>
+<use xlink:href="#h" fill="#bacaff"/>
+<use xlink:href="#i" fill="#000071"/>
+<use xlink:href="#j" fill="#1c0071"/>
+<use xlink:href="#k" fill="#390071"/>
+<use xlink:href="#l" fill="#550071"/>
+<use xlink:href="#m" fill="#710071"/>
+<use xlink:href="#n" fill="#710055"/>
+<use xlink:href="#o" fill="#710039"/>
+<use xlink:href="#p" fill="#71001c"/>
+</g>
+<g transform="translate(0,7)">
+<use xlink:href="#a" fill="#710000"/>
+<use xlink:href="#b" fill="#711c00"/>
+<use xlink:href="#c" fill="#713900"/>
+<use xlink:href="#d" fill="#715500"/>
+<use xlink:href="#e" fill="#717100"/>
+<use xlink:href="#f" fill="#557100"/>
+<use xlink:href="#g" fill="#397100"/>
+<use xlink:href="#h" fill="#1c7100"/>
+<use xlink:href="#i" fill="#007100"/>
+<use xlink:href="#j" fill="#00711c"/>
+<use xlink:href="#k" fill="#007139"/>
+<use xlink:href="#l" fill="#007155"/>
+<use xlink:href="#m" fill="#007171"/>
+<use xlink:href="#n" fill="#005571"/>
+<use xlink:href="#o" fill="#003971"/>
+<use xlink:href="#p" fill="#001c71"/>
+</g>
+<g transform="translate(0,8)">
+<use xlink:href="#a" fill="#393971"/>
+<use xlink:href="#b" fill="#453971"/>
+<use xlink:href="#c" fill="#553971"/>
+<use xlink:href="#d" fill="#613971"/>
+<use xlink:href="#e" fill="#713971"/>
+<use xlink:href="#f" fill="#713961"/>
+<use xlink:href="#g" fill="#713955"/>
+<use xlink:href="#h" fill="#713945"/>
+<use xlink:href="#i" fill="#713939"/>
+<use xlink:href="#j" fill="#714539"/>
+<use xlink:href="#k" fill="#715539"/>
+<use xlink:href="#l" fill="#716139"/>
+<use xlink:href="#m" fill="#717139"/>
+<use xlink:href="#n" fill="#617139"/>
+<use xlink:href="#o" fill="#557139"/>
+<use xlink:href="#p" fill="#457139"/>
+</g>
+<g transform="translate(0,9)">
+<use xlink:href="#a" fill="#397139"/>
+<use xlink:href="#b" fill="#397145"/>
+<use xlink:href="#c" fill="#397155"/>
+<use xlink:href="#d" fill="#397161"/>
+<use xlink:href="#e" fill="#397171"/>
+<use xlink:href="#f" fill="#396171"/>
+<use xlink:href="#g" fill="#395571"/>
+<use xlink:href="#h" fill="#394571"/>
+<use xlink:href="#i" fill="#515171"/>
+<use xlink:href="#j" fill="#595171"/>
+<use xlink:href="#k" fill="#615171"/>
+<use xlink:href="#l" fill="#695171"/>
+<use xlink:href="#m" fill="#715171"/>
+<use xlink:href="#n" fill="#715169"/>
+<use xlink:href="#o" fill="#715161"/>
+<use xlink:href="#p" fill="#715159"/>
+</g>
+<g transform="translate(0,10)">
+<use xlink:href="#a" fill="#715151"/>
+<use xlink:href="#b" fill="#715951"/>
+<use xlink:href="#c" fill="#716151"/>
+<use xlink:href="#d" fill="#716951"/>
+<use xlink:href="#e" fill="#717151"/>
+<use xlink:href="#f" fill="#697151"/>
+<use xlink:href="#g" fill="#617151"/>
+<use xlink:href="#h" fill="#597151"/>
+<use xlink:href="#i" fill="#517151"/>
+<use xlink:href="#j" fill="#517159"/>
+<use xlink:href="#k" fill="#517161"/>
+<use xlink:href="#l" fill="#517169"/>
+<use xlink:href="#m" fill="#517171"/>
+<use xlink:href="#n" fill="#516971"/>
+<use xlink:href="#o" fill="#516171"/>
+<use xlink:href="#p" fill="#515971"/>
+</g>
+<g transform="translate(0,11)">
+<use xlink:href="#a" fill="#000041"/>
+<use xlink:href="#b" fill="#100041"/>
+<use xlink:href="#c" fill="#200041"/>
+<use xlink:href="#d" fill="#310041"/>
+<use xlink:href="#e" fill="#410041"/>
+<use xlink:href="#f" fill="#410031"/>
+<use xlink:href="#g" fill="#410020"/>
+<use xlink:href="#h" fill="#410010"/>
+<use xlink:href="#i" fill="#410000"/>
+<use xlink:href="#j" fill="#411000"/>
+<use xlink:href="#k" fill="#412000"/>
+<use xlink:href="#l" fill="#413100"/>
+<use xlink:href="#m" fill="#414100"/>
+<use xlink:href="#n" fill="#314100"/>
+<use xlink:href="#o" fill="#204100"/>
+<use xlink:href="#p" fill="#104100"/>
+</g>
+<g transform="translate(0,12)">
+<use xlink:href="#a" fill="#004100"/>
+<use xlink:href="#b" fill="#004110"/>
+<use xlink:href="#c" fill="#004120"/>
+<use xlink:href="#d" fill="#004131"/>
+<use xlink:href="#e" fill="#004141"/>
+<use xlink:href="#f" fill="#003141"/>
+<use xlink:href="#g" fill="#002041"/>
+<use xlink:href="#h" fill="#001041"/>
+<use xlink:href="#i" fill="#202041"/>
+<use xlink:href="#j" fill="#282041"/>
+<use xlink:href="#k" fill="#312041"/>
+<use xlink:href="#l" fill="#392041"/>
+<use xlink:href="#m" fill="#412041"/>
+<use xlink:href="#n" fill="#412039"/>
+<use xlink:href="#o" fill="#412031"/>
+<use xlink:href="#p" fill="#412028"/>
+</g>
+<g transform="translate(0,13)">
+<use xlink:href="#a" fill="#412020"/>
+<use xlink:href="#b" fill="#412820"/>
+<use xlink:href="#c" fill="#413120"/>
+<use xlink:href="#d" fill="#413920"/>
+<use xlink:href="#e" fill="#414120"/>
+<use xlink:href="#f" fill="#394120"/>
+<use xlink:href="#g" fill="#314120"/>
+<use xlink:href="#h" fill="#284120"/>
+<use xlink:href="#i" fill="#204120"/>
+<use xlink:href="#j" fill="#204128"/>
+<use xlink:href="#k" fill="#204131"/>
+<use xlink:href="#l" fill="#204139"/>
+<use xlink:href="#m" fill="#204141"/>
+<use xlink:href="#n" fill="#203941"/>
+<use xlink:href="#o" fill="#203141"/>
+<use xlink:href="#p" fill="#202841"/>
+</g>
+<g transform="translate(0,14)">
+<use xlink:href="#a" fill="#2d2d41"/>
+<use xlink:href="#b" fill="#312d41"/>
+<use xlink:href="#c" fill="#352d41"/>
+<use xlink:href="#d" fill="#3d2d41"/>
+<use xlink:href="#e" fill="#412d41"/>
+<use xlink:href="#f" fill="#412d3d"/>
+<use xlink:href="#g" fill="#412d35"/>
+<use xlink:href="#h" fill="#412d31"/>
+<use xlink:href="#i" fill="#412d2d"/>
+<use xlink:href="#j" fill="#41312d"/>
+<use xlink:href="#k" fill="#41352d"/>
+<use xlink:href="#l" fill="#413d2d"/>
+<use xlink:href="#m" fill="#41412d"/>
+<use xlink:href="#n" fill="#3d412d"/>
+<use xlink:href="#o" fill="#35412d"/>
+<use xlink:href="#p" fill="#31412d"/>
+</g>
+<g transform="translate(0,15)">
+<use xlink:href="#a" fill="#2d412d"/>
+<use xlink:href="#b" fill="#2d4131"/>
+<use xlink:href="#c" fill="#2d4135"/>
+<use xlink:href="#d" fill="#2d413d"/>
+<use xlink:href="#e" fill="#2d4141"/>
+<use xlink:href="#f" fill="#2d3d41"/>
+<use xlink:href="#g" fill="#2d3541"/>
+<use xlink:href="#h" fill="#2d3141"/>
+</g>
+</svg>
