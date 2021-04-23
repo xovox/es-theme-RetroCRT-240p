@@ -24,6 +24,8 @@ secondary="#888888"
 #secondary=red
 #primary="#AAAAAA"
 #secondary="#444444"
+primary="#66ef0d"
+secondary="#46a10b"
 primary="${primary:-#E60000}"
 secondary="${secondary:-#0000FF}"
 
@@ -35,15 +37,15 @@ for system in ${!system_name[@]} ; do
 	echo "$system	$systemtext"
 
 	convert \
-		-size 240x20 \
+		-size 2000x$[ (16 * 4) + 2 ] \
 		xc:transparent \
 		-font "$font" \
 		-fill "$secondary" \
-		-pointsize 16 \
+		-pointsize $[ 16 * 4 ]  \
 		-gravity center \
-		-annotate +2+2 "$systemtext" \
+		-annotate +8+8 "$systemtext" \
 		-fill "$primary" \
-		-pointsize 16 \
+		-pointsize $[ 16 * 4 ]  \
 		-gravity center \
 		-annotate +0+0 "$systemtext" \
 			$system.png
