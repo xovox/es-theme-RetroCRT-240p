@@ -127,7 +127,7 @@ RetroCRT3-240p theme for EmulationStation
       <path>./_inc/biglogo/${system.theme}.png</path>
       <origin>0.5 0.5</origin>
       <pos>0.280 0.133</pos>
-      <maxSize>0.40 0.115</maxSize>
+      <maxSize>0.450 0.115</maxSize>
         <color>ffffff</color>
     </image>
     <image name="md_marquee">
