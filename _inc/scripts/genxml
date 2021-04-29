@@ -1,0 +1,25 @@
+#!/bin/bash
+
+cat << EOF
+<?xml version="1.0"?>
+<theme>
+    <formatVersion>4</formatVersion>
+EOF
+
+if [ -f "$1/description.txt" ]; then
+    while read line ; do
+        field="$(cut -d'	' -f1 <<< "$line")"
+        string="$(cut -d'	' -f2 <<< "$line")" 
+        cat << EOF
+      <text name="$field" extra="true">
+        <text>$string</text>
+      </text>
+EOF
+    done < $1/description.txt 
+fi
+
+cat << EOF
+    <include>./../retrocrt.xml</include>
+</theme>
+EOF
+

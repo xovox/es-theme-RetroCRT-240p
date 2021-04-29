@@ -1,0 +1,8 @@
+sys_manf	Nintendo
+sys_gen	Third 
+sys_dates	1983–2003 (Famicom) / 1985–1995 (NES)
+sys_units	61.91 million
+sys_units	Ricoh 2A03 8-bit processor (MOS Technology 6502 core)
+sys_units	Super Mario Bros, 40.24 million
+sys_units	Color TV-Game series
+sys_units	Super Nintendo Entertainment System

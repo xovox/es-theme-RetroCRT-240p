@@ -1,0 +1,30 @@
+Manufacturer	Sega
+Generation	Fourth generation
+
+Lifespan
+    1988–1997 (Sega)
+    1998-1999 (Majesco)
+
+Units sold	
+
+    Sega: 30.75 million
+
+CPU	
+
+    Motorola 68000 @ 7.6 MHz
+    Zilog Z80 @ 3.58 MHz
+
+Display	
+
+    Progressive: 320×224, 256×224 (NTSC) or 320×240, 256×240 (PAL) pixels, 512 color palette, 61 colors on-screen
+    Interlaced: 320×448, 256×448 (NTSC) or 320×480, 256×480 (PAL)
+
+Sound	
+
+    Yamaha YM2612
+    Texas Instruments SN76489
+
+Best-selling game	Sonic the Hedgehog
+
+Predecessor	Master System
+Successor	Sega Saturn
