@@ -4,9 +4,7 @@ RetroCRT3-240p theme for EmulationStation
 (c) 2021 duncan brown (https://github.com/xovox)
 -->
 <theme>
-  <formatVersion>
-			4
-  </formatVersion>
+  <formatVersion>4</formatVersion>
   <feature supported="carousel">
     <view name="system">
       <carousel name="systemcarousel">
@@ -17,7 +15,7 @@ RetroCRT3-240p theme for EmulationStation
 -->
         <pos>0.500  0.320</pos>
         <size>0.900     0.500</size>
-	<origin>0.500 0.500</origin>
+        <origin>0.500 0.500</origin>
         <logoAlignment>center</logoAlignment>
         <logoScale>0.75</logoScale>
         <!-- object layer, higher goes on top of lower -->
@@ -28,14 +26,14 @@ RetroCRT3-240p theme for EmulationStation
         <maxLogoCount>11</maxLogoCount>
       </carousel>
       <image name="logo">
-        <path>./_inc/logo/${system.theme}.png</path>
+        <path>./_inc/logo/small/${system.theme}.png</path>
         <color>FF8C00</color>
       </image>
       <image name="system" extra="true">
         <origin>0.5 0.5</origin>
         <pos>0.250 0.750</pos>
-        <maxSize>0.400 0.33334</maxSize>
-	<path>./_inc/system/small/${system.theme}.png</path>
+        <maxSize>0.400 0.350</maxSize>
+        <path>./_inc/system/small/${system.theme}.png</path>
           <!-- object layer, higher goes on top of lower -->
         <zIndex>5</zIndex>
         <color>FFFFFF55</color>
@@ -52,8 +50,8 @@ RetroCRT3-240p theme for EmulationStation
   </feature>
 
   <view name="detailed, video">
- <text name="shortdescription" extra="true">
-        <fontPath>./_inc/font/04B_03__.TTF</fontPath>
+    <text name="shortdescription" extra="true">
+      <fontPath>./_inc/font/04B_03__.TTF</fontPath>
         <alignment>center</alignment>
         <forceUppercase>1</forceUppercase>
         <fontSize>0.03</fontSize>
@@ -62,9 +60,9 @@ RetroCRT3-240p theme for EmulationStation
         <origin>0.5 0.5</origin>
         <pos>0.710 0.800</pos>
         <size>0.32 0.1</size>
- </text>
+    </text>
     <text name="
-	       gamelist,
+               gamelist,
                md_lbl_lastplayed,
                md_lbl_playcount,
                md_lbl_players,
@@ -113,8 +111,8 @@ RetroCRT3-240p theme for EmulationStation
 
     <textlist name="gamelist">
       <origin>0.5 0.5</origin>
-      <pos>0.280 0.555</pos>
-      <size>0.45 0.70</size>
+      <pos>0.280 0.570</pos>
+      <size>0.450 0.650</size>
       <alignment>left</alignment>
       <!-- game text -->
       <primaryColor>FF8C00EE</primaryColor>
@@ -124,21 +122,22 @@ RetroCRT3-240p theme for EmulationStation
       <selectorColor>FF450055</selectorColor>
     </textlist>
     <image name="logo" extra="true">
-      <path>./_inc/biglogo/${system.theme}.png</path>
+      <path>./_inc/logo/big/${system.theme}.png</path>
       <origin>0.5 0.5</origin>
-      <pos>0.280 0.133</pos>
-      <maxSize>0.450 0.1125</maxSize>
+      <pos>0.280 0.150</pos>
+      <!-- 144 x 36 -->
+      <maxSize>0.450 0.150</maxSize>
         <color>ffffff</color>
     </image>
     <image name="md_marquee">
       <origin>0.5 0.5</origin>
-      <pos>0.740 0.133</pos>
-      <maxSize>0.40 0.115</maxSize>
+      <pos>0.740 0.150</pos>
+      <maxSize>0.400 0.150</maxSize>
     </image>
     <video name="md_video">
       <origin>0.5 0.5</origin>
-      <pos>0.740 0.46</pos>
-      <maxSize>0.4 0.50</maxSize>
+      <pos>0.740 0.470</pos>
+      <maxSize>0.40 0.450</maxSize>
       <showSnapshotNoVideo>true</showSnapshotNoVideo>
       <delay>3</delay>
       <showSnapshotDelay>true</showSnapshotDelay>

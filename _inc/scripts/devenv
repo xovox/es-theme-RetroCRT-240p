@@ -2,7 +2,7 @@
 
 export DISPLAY=:0.0
 
-scripts/watch_maintheme &
+#scripts/watch_maintheme &
 
 while true ; do
 	date
