@@ -12,6 +12,16 @@ This is a theme I've designed for [RetroCRT](https://github.com/xovox/RetroCRT),
 * Unsupported
   * Grid View, but this may come at some point
 
+# Unsupported Main Systems
+
+These will be supported soon
+
+```
+atarijaguarcd
+atarifalcon
+atarixe
+```
+
 # Gallery
 
 * [The big gallery](https://github.com/xovox/RetroCRT-Media/blob/master/RetroCRT-240p/GALLERY.md) has all of my pics.
