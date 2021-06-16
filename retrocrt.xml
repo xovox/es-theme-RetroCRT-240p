@@ -27,7 +27,7 @@ RetroCRT3-240p theme for EmulationStation
       </carousel>
       <image name="logo">
         <path>./_inc/logo/small/${system.theme}.png</path>
-        <color>FF8C00</color>
+        <color>66ff00</color>
       </image>
       <image name="system" extra="true">
         <origin>0.5 0.5</origin>
@@ -44,12 +44,40 @@ RetroCRT3-240p theme for EmulationStation
         <fontSize>0.035</fontSize>
         <origin>0.500 0.500</origin>
         <pos>0.750 0.750</pos>
-        <color>FF8C00EE</color>
+        <color>66FF00EE</color>
       </text>
     </view>
   </feature>
+  <view name="system,detailed,video,basic">
+    <helpsystem name="help">
+      <pos>0.012 1.960</pos>
+      <textColor>ffc000</textColor>
+      <iconColor>ffc000</iconColor>
+      <fontPath>./_inc/font/04B_03__.TTF</fontPath>
+      <fontSize>0.035</fontSize>
+    </helpsystem>
+    <image name="background" extra="true">
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+      <maxSize>1 1</maxSize>
+      <size>1 1</size>
+      <tile>false</tile>
+      <path>./_inc/background/background.png</path>
+      <!--
+        amber           FF8C00FF
+        deep purple     36013FFF    
+        bright green    66FF00FF
+        cobalt blue	0047ab
+      -->
+      <color>0047abFF</color>
 
-  <view name="detailed, video">
+      <!-- object layer, higher goes on top of lower -->
+      <zIndex>0</zIndex>
+    </image>
+  </view>
+
+  <view name="detailed,video,basic">
+	  <!--
     <text name="shortdescription" extra="true">
       <fontPath>./_inc/font/04B_03__.TTF</fontPath>
         <alignment>center</alignment>
@@ -61,21 +89,11 @@ RetroCRT3-240p theme for EmulationStation
         <pos>0.710 0.800</pos>
         <size>0.32 0.1</size>
     </text>
-    <text name="
-               gamelist,
-               md_lbl_lastplayed,
-               md_lbl_playcount,
-               md_lbl_players,
-               md_developer,
-               md_genre,
-               md_lastplayed,
-               md_playcount,
-               md_players,
-               md_releasedate
-               ">
+	  -->
+    <text name="                gamelist,                md_lbl_lastplayed,                md_lbl_playcount,                md_lbl_players,                md_developer,                md_genre,                md_lastplayed,                md_playcount,                md_players,                md_releasedate                ">
       <!-- <size>0.192 0.030</size> -->
       <origin>0 1</origin>
-      <color>FF8C00</color>
+      <color>66FF00</color>
       <forceUppercase>1</forceUppercase>
       <fontPath>./_inc/font/04B_03__.TTF</fontPath>
       <fontSize>0.035</fontSize>
@@ -115,11 +133,11 @@ RetroCRT3-240p theme for EmulationStation
       <size>0.450 0.650</size>
       <alignment>left</alignment>
       <!-- game text -->
-      <primaryColor>FF8C00EE</primaryColor>
+      <primaryColor>66FF00FF</primaryColor>
       <!-- dir text -->
       <secondaryColor>FF4500</secondaryColor>
-      <selectedColor>FF8C00FF</selectedColor>
-      <selectorColor>FF450055</selectorColor>
+      <selectedColor>e6ff00FF</selectedColor>
+      <selectorColor>a9a9a955</selectorColor>
     </textlist>
     <image name="logo" extra="true">
       <path>./_inc/logo/big/${system.theme}.png</path>
@@ -144,27 +162,7 @@ RetroCRT3-240p theme for EmulationStation
     </video>
   </view>
 
-  <view name="detailed,video,basic,system">
-    <image name="background" extra="true">
-      <origin>0 0</origin>
-      <pos>0 0</pos>
-      <maxSize>1 1</maxSize>
-      <size>1 1</size>
-      <tile>false</tile>
-      <path>./_inc/background/background.png</path>
-      <color>FF8C00FF</color>
-        <!-- object layer, higher goes on top of lower -->
-      <zIndex>0</zIndex>
-    </image>
-    <helpsystem name="help">
-      <pos>0.012 1.960</pos>
-      <textColor>ffc000</textColor>
-      <iconColor>ffc000</iconColor>
-      <fontPath>./_inc/font/04B_03__.TTF</fontPath>
-      <fontSize>0.035</fontSize>
-    </helpsystem>
-  </view>
-
+  <!--
   <view name="basic">
     <textlist name="gamelist">
       <origin>0.5 0.5</origin>
@@ -175,11 +173,9 @@ RetroCRT3-240p theme for EmulationStation
       <forceUppercase>1</forceUppercase>
       <fontPath>./_inc/font/04B_03__.TTF</fontPath>
       <fontSize>0.070</fontSize>
-      <!-- game text -->
-      <primaryColor>FF8C00</primaryColor>
-      <!-- dir text -->
+      <primaryColor>66FF00</primaryColor>
       <secondaryColor>FF4500</secondaryColor>
-      <selectedColor>FF8C00</selectedColor>
+      <selectedColor>66FF00</selectedColor>
       <selectorColor>FF450099</selectorColor> 
     </textlist>
     <image name="system" extra="true">
@@ -187,9 +183,9 @@ RetroCRT3-240p theme for EmulationStation
       <pos>.5 .5</pos>
       <maxSize>.80 .80</maxSize>
       <path>./_inc/system/big/${system.theme}.png</path>
-      <!-- <color>AAAAAACC</color> -->
     </image>
   </view>
+  -->
 
 
 </theme>
