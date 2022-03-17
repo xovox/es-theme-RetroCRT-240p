@@ -53,17 +53,16 @@ for system in ${!system_name[@]} ; do
 		-annotate +0+0 "$systemtext" \
 		-flatten \
 			../logo/small/$system.png
-#	convert \
-#		-size 2000x$[ (16 * 4) + 2 ] \
-#		xc:transparent \
-#		-font "$font" \
-#		-fill "$secondary" \
-#		-pointsize $[ 16 * 4 ]  \
-#		-gravity center \
-#		-annotate +8+8 "$systemtext" \
-#		-fill "$primary" \
-#		-pointsize $[ 16 * 4 ]  \
-#		-gravity center \
-#		-annotate +0+0 "$systemtext" \
-#			$system.png
+
+
+
+	if [ ! -f ../system/small/$system.png ]; then
+		convert \
+			../system/big/$system.png \
+			-fuzz 1% \
+			-trim +repage \
+			-scale "128x84>" \
+			-background none .\
+				../system/small/$system.png \
+	fi
 done
