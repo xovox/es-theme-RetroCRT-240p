@@ -36,27 +36,30 @@ source ../scripts/systems
 for system in ${!system_name[@]} ; do
 	systemtext="${system_name[$system]}"
 
-	echo "$systemtext"
+	echo -n "$systemtext..."
 
-	convert \
-		-size 240x20 \
-		xc:transparent \
-		-font "$font" \
-		-fill "$secondary" \
-		-pointsize 16 \
-		-gravity center \
-		-annotate +2+2 "$systemtext" \
-		-flatten \
-		-fill "$primary" \
-		-pointsize 16 \
-		-gravity center \
-		-annotate +0+0 "$systemtext" \
-		-flatten \
-			../logo/small/$system.png
-
+	if [ ! -f ../logo/small/$system.png ]; then
+		echo -n " ES menu text..."
+		convert \
+			-size 240x20 \
+			xc:transparent \
+			-font "$font" \
+			-fill "$secondary" \
+			-pointsize 16 \
+			-gravity center \
+			-annotate +2+2 "$systemtext" \
+			-flatten \
+			-fill "$primary" \
+			-pointsize 16 \
+			-gravity center \
+			-annotate +0+0 "$systemtext" \
+			-flatten \
+				../logo/small/$system.png
+	fi
 
 
 	if [ ! -f ../system/small/$system.png ]; then
+		echo -n " system resize..."
 		convert \
 			../system/big/$system.png \
 			-fuzz 1% \
@@ -65,4 +68,30 @@ for system in ${!system_name[@]} ; do
 			-background none .\
 				../system/small/$system.png \
 	fi
+
+	if [[ "$system" =~ auto-.* ]] && [ ! -f ../logo/large/$system.png ]; then
+		
+		primary="#0088FF"
+		secondary="#FF8800"
+
+		convert \
+		-size 2000x2000 \
+		xc:transparent \
+		-font zorque \
+		-fill "$primary" \
+		-pointsize 18 \
+		-gravity center \
+		-annotate +0+0 "$systemtext" \
+		-kerning .5 \
+		-fill "$secondary" \
+		-pointsize 18 \
+		-gravity center \
+		-annotate +0+0 "$systemtext" \
+		-trim \
+		+repage \
+		../logo/large/$system.png
+	fi
+
+
+	echo
 done
